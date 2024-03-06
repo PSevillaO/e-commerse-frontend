@@ -1,6 +1,8 @@
 .main-login {
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-container {
@@ -32,7 +34,11 @@
     }
 }
 
-
+/* .loading {
+    position: absolute;
+    top: 250px;
+    left: 500px;
+} */
 
 .login-form input {
     width: 100%;

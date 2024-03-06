@@ -19,6 +19,7 @@ export const UserProvider = ({ children }) => {
     return localStorage.getItem("token") || null;
   });
 
+
   const navigate = useNavigate();
 
   async function login(data) {
@@ -50,6 +51,7 @@ export const UserProvider = ({ children }) => {
         icon: "error"
       })
     }
+
   }
 
   function logout() {

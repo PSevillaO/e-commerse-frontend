@@ -1,8 +1,11 @@
 import './Login.css'
 import { useUser } from '../../context/UserContext';
+import { useState } from "react"
+import Loading from '../../componnets/Loading/Loading';
 
 export default function Login() {
   const { login } = useUser()
+  const [loading, setLoading] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,11 +15,15 @@ export default function Login() {
       email: el.email.value,
       password: el.password.value
     }
-
+    setLoading(true);
     login(data)
+      .catch(error => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }
-
-
 
   return (
     <div className='main-login'>
@@ -29,7 +36,7 @@ export default function Login() {
           <label> Password</label>
           <input name='password' type="password" placeholder="Contraseña" />
 
-          <button type="submit" className="button">Ingresar</button>
+          <button type="submit" className="button"> {loading ? <Loading /> : "Ingresar"}</button>
         </form>
       </div>
     </div>

@@ -11,6 +11,7 @@ export const ProductCard = ({ product }) => {
 
     const { addItem } = useOrder();
 
+
     return (
         <article className="card">
             <header className="card-header">

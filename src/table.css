@@ -1,0 +1,450 @@
+.main {
+    background-color: rgb(224, 234, 224);
+}
+
+
+.input-container {
+    margin-bottom: .5rem;
+
+    .input {
+        padding: .375rem .675rem;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 3px solid crimson;
+        margin-left: 1rem;
+    }
+}
+
+.product-section,
+.user-section {
+    display: grid;
+    gap: 1rem;
+    font-weight: bold;
+    justify-items: center;
+}
+
+.product-form,
+.user-form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 680px;
+    width: 300px;
+}
+
+.form-sticky-admin {
+    border: 1px solid black;
+    padding: 1rem;
+    margin-top: .5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    height: 700px;
+}
+
+.input-group {
+    /* margin: 0 auto; */
+    margin-bottom: .75rem;
+    display: flex;
+    flex-direction: column;
+    /* padding-inline: 1rem; */
+    width: 100%;
+
+    :is(input, textarea, select) {
+        padding: .375rem .675rem;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 3px solid dodgerblue;
+    }
+}
+
+.input-price {
+    width: 200px;
+}
+
+.input-image {
+    border-bottom: none;
+    margin-bottom: .75rem;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+    width: 100%;
+
+    .input-select {
+        margin: .3rem 0 0 0;
+        color: #111;
+        font-size: 1rem;
+    }
+
+}
+
+input[type="file"] {
+    position: relative;
+}
+
+input[type="file"]::after {
+    position: absolute;
+    content: "Seleccionar archivo";
+    padding: 0.6rem 0.8rem;
+    border-radius: .8rem;
+    background-color: gray;
+    top: 0.1rem;
+    left: 0.1rem;
+    /* right: 0.1rem; */
+    cursor: pointer;
+}
+
+.input-active {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-top: 0.5rem;
+}
+
+.active {
+    padding-right: .5rem;
+    margin-left: .5rem;
+}
+
+.admin-input-user {
+    width: 20px;
+    height: 20px;
+}
+
+
+.ck,
+.submit-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.btn-form {
+    margin-top: 3rem;
+    padding: .5rem 1rem;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    border: none;
+    font-family: var(--font-family);
+    transition: all 500ms ease;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 200px;
+}
+
+.btn-form:hover {
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.75);
+    color: black
+}
+
+
+.btn-Edit {
+    background-color: green;
+    color: white
+}
+
+.btn-create {
+    background-color: dodgerblue;
+    color: white
+}
+
+
+.user-table,
+.product-table {
+    width: 98%;
+    border-collapse: collapse;
+    /* margin: 2rem 0 2rem; */
+    font-size: 7px;
+    display: block;
+    overflow-x: scroll;
+
+    tr {
+        &:nth-child(even) {
+            background-color: #e7d7d7;
+        }
+
+        td {
+            padding: 10px;
+
+        }
+    }
+
+}
+
+.user-table thead {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.product-table thead {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+.product-table :is(th, td) {
+    padding: 2px 5px;
+    border: 1px solid rgb(34, 11, 26);
+}
+
+.user-table :is(th, td) {
+    padding: 2px 5px;
+    border: 1px solid rgb(34, 11, 26);
+}
+
+.table-body .table-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.table-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 15%;
+    object-fit: cover;
+
+}
+
+
+table.user-table td.table-name {
+    width: 500px !important;
+}
+
+
+.action-btn {
+    background-color: green;
+    color: white;
+    padding: .25rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: xx-small;
+
+    &:not(:last-child) {
+        margin-right: 2px;
+    }
+
+    &.btn-danger {
+        background-color: crimson;
+    }
+}
+
+.user-action {
+    width: 115px;
+}
+
+.admin-form-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.btn {
+    color: whitesmoke;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin: .1rem;
+}
+
+.btn-salir,
+.btn-delete {
+    background-color: red;
+    margin-right: .2rem;
+}
+
+.btn-salir:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    color: black;
+}
+
+.btn-delete:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    color: black;
+}
+
+.btn-edit {
+    background-color: green;
+}
+
+.btn-edit:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    color: black;
+}
+
+
+.flex-between {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input-search {
+    width: 300px;
+}
+
+.actions {
+    width: 80%;
+}
+
+.lbl {
+    margin: 0.3rem 0 .2rem 0
+}
+
+
+.pagination-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+
+    .page-container {
+        button {
+            background-color: dodgerblue;
+            height: 25px;
+            width: 20px;
+            border: 1px solid royalblue;
+            border-radius: 5px;
+            color: white;
+            box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        button:hover {
+            background-color: royalblue;
+            box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.75);
+        }
+
+
+    }
+}
+
+.selc {
+    width: 45px;
+    height: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (width > 768px) {
+
+    .product-form,
+    .user-form {
+        width: 350px;
+        margin-inline: 1rem;
+    }
+
+
+    .form-sticky-admin {
+        position: sticky;
+        top: 50px;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 0.2rem;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        height: 700px;
+    }
+
+    .product-section,
+    .user-section {
+        grid-template-columns: 1fr 5fr;
+    }
+
+    .product-table,
+    .user-table {
+        font-size: small;
+
+        .table-body .table-image img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .product-table :is(th, td) {
+        padding: 5px 10px;
+    }
+
+    .user-table :is(th, td) {
+        padding: 5px 10px;
+        border: 1px solid grey;
+    }
+
+    .action-btn {
+        font-size: small;
+    }
+
+    .input-search {
+        margin-left: 1.5rem;
+    }
+
+
+}
+
+@media screen and (width > 1250px) {}
+
+.input-search {
+    margin-top: 1rem;
+}
+
+
+.input-search>div {
+    display: inline-block;
+    position: relative;
+    filter: drop-shadow(0 1px #3d3f40);
+}
+
+.input-search>div:after {
+    content: "";
+    background: #111;
+    width: 3px;
+    height: 15px;
+    position: absolute;
+    top: 18px;
+    right: -4px;
+    transform: rotate(135deg);
+}
+
+.input-search>div>input {
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: solid 3px #111;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+    margin-left: 1rem;
+}
+
+.input-search>div>input::placeholder {
+    color: white;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+.input-search>div>input:focus::placeholder {
+    opacity: 1;
+}
+
+.input-search>div>input:focus,
+.input-search>div>input:not(:placeholder-shown) {
+    width: 250px;
+}

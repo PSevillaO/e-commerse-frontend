@@ -1,0 +1,95 @@
+/* .main-banner {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    font-size: .75rem;
+}
+
+.main-banner .banner-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-banner .banner-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: .25rem;
+    padding: 1em;
+    width: 85%;
+    max-width: 400px;
+} */
+
+/* banner */
+.main-banner {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-info {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .53);
+    color: var(--bg-light);
+    top: 20%;
+    bottom: 10px;
+    right: 50%;
+    left: 3%;
+    font-size: 12px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .banner-title {
+        padding: .5rem 1rem;
+        font-family: var(--font-family-h1);
+        font-size: 38px;
+        text-shadow: -1px 0 #ff0000, 0 1px #ff0000, 1px 0 #ff0000, 0 -1px #ff0000;
+    }
+}
+
+.banner-text {
+    position: relative;
+    z-index: 0;
+}
+
+.banner-text::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 150%;
+    background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+    background-size: 400%;
+    border-radius: 10px;
+    filter: blur(38px);
+    animation: glowing 20s linear infinite;
+}
+
+
+@media screen and (width > 768px) {
+.banner-info {
+    top: 35%;
+    bottom: 10px;
+    right: 3%;
+    left: 55%;
+    font-size: 14px;
+}
+}

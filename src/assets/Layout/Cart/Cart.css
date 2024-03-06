@@ -1,0 +1,140 @@
+.cart-wrapper {
+    width: 0px;
+    overflow: hidden;
+    background-color: rgb(238, 229, 229);
+    position: fixed;
+    top: 20px;
+    /* padding: 50px 1rem; */
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    margin-top: 35px;
+    transition: width .25s ease-in-out;
+
+    &.active {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 5px;
+
+        .list-container {
+            padding: .5rem;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .order-quantity {
+            display: flex;
+
+            .order-delete-item {
+                padding-inline: .5rem;
+                color: #dd4c4c;
+            }
+        }
+
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: .5rem;
+            border-bottom: 1px solid #ccc
+        }
+    }
+
+    ;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.order-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 30%;
+    object-fit: cover;
+}
+
+.order-name {
+    padding-inline: .5rem;
+}
+
+
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.order-finish {
+    padding: 0.5rem;
+}
+
+.order-purchase {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+
+    a {
+        cursor: pointer;
+        padding: 6px 12px;
+        background: var(--gradiente);
+        font-size: 12px;
+        color: white;
+        text-decoration: none;
+        border: none;
+        font-family: var(--font-family);
+        transition: all 500ms ease;
+        border-radius: 3px;
+        font-weight: bold;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    a:hover {
+        box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+        color: black;
+    }
+
+    .btn-comprar {
+        padding: 6px 12px;
+        background: var(--gradiente);
+        font-size: 12px;
+        color: white;
+        text-decoration: none;
+        border: none;
+        font-family: var(--font-family);
+        transition: all 500ms ease;
+        border-radius: 3px;
+        font-weight: bold;
+        width: 100px;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .btn-comprar:hover {
+        box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+        color: black;
+    }
+}
+
+.total {
+    padding-bottom: .5rem;
+
+    .total-count {
+        padding-bottom: .5rem;
+    }
+
+    .total-price {
+        padding-bottom: .5rem;
+    }
+}

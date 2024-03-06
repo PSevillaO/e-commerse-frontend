@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #f50a35;
+  --primary-color-dark: #ff6803;
+  --primary-about-color: radial-gradient(circle, rgba(152, 150, 150, 0.7988445378151261) 0%, rgba(45, 44, 44, 1) 100%);
+  --secondary-color: #222222;
+  --text-light: #090800;
+  --bg-light: #fffef7;
+  --font-family: 'roboto', sans-serif;
+  --font-family-h1: 'Shadows Into Light', sans-serif;
+  --padding-normal: 1rem;
+  --margin-align: auto;
+  --gradiente: radial-gradient(circle, rgba(226, 131, 41, 1) 0%, rgba(227, 26, 26, 1) 100%);
+  --gradiente-hover: radial-gradient(circle, rgba(227, 26, 26, 1) 100%, rgba(226, 131, 41, 1) 0%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: rgba(214, 209, 209, 0.423);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(153, 148, 148, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: rgba(243 214 237);
+}

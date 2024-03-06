@@ -1,0 +1,106 @@
+.contact-map {
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    border: solid 2px var(--primary-color-dark);
+    overflow: hidden;
+    margin: 0.25rem 1rem;
+    border-radius: 10px;
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 500px;
+    width: 350px;
+}
+
+.form-sticky {
+    position: sticky;
+    top: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.2rem;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.input-group-cont {
+    /* margin: 0 auto; */
+    margin-bottom: .75rem;
+    display: flex;
+    flex-direction: column;
+    /* padding-inline: 1rem; */
+    width: 100%;
+    font-weight: bold;
+    padding-right: 1rem;
+
+    :is(input, textarea, select) {
+        padding: .375rem .675rem;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 3px solid dodgerblue;
+        margin-inline: 0.5rem;
+    }
+}
+
+.label-register-cont {
+    margin-inline: .5rem;
+}
+
+.input-wrapper-cont {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+
+}
+
+.input-cont:is(input, select, textarea) {
+    width: 320px;
+}
+
+.input-cont {
+    margin-bottom: .5rem;
+}
+
+.btn-contact {
+    margin-right: 1rem;
+}
+
+@media screen and (width > 768px) {
+    .register {
+        width: 320px;
+        padding-left: 1rem;
+    }
+
+
+    .input-cont:is(input, select, textarea) {
+        width: 320px;
+    }
+
+    .main-section {
+        display: flex;
+        justify-content: space-evenly;
+        height: 68vh;
+    }
+
+    .contact-map {
+        /* flex-basis: 0%; */
+        width: 50%;
+        height: 60%;
+        margin: 1rem;
+        border: none;
+    }
+
+    .btn-registrar {
+        margin: 0.25rem 0 0.5rem 205px;
+    }
+
+    .btn-contact {
+        margin: 0.25rem 0 0.5rem 221px;
+    }
+
+}

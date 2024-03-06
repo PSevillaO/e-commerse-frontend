@@ -42,6 +42,7 @@
     border-radius: 10px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     height: 700px;
+    background-color: darkgrey;
 }
 
 .input-group {
@@ -223,7 +224,7 @@ input[type="file"]::after {
 
 
 table.user-table td.table-name {
-    width: 500px !important;
+    /* width: 500px !important; */
 }
 
 
@@ -307,6 +308,27 @@ table.user-table td.table-name {
     margin: 0.3rem 0 .2rem 0
 }
 
+.table-description {
+    width: 500px !important;
+}
+
+.table-email {
+    width: 250px !important;
+}
+
+.table-name {
+    width: 250px !important;
+}
+
+.table-info {
+    width: 250px !important;
+}
+
+.actions {
+    width: 150px !important;
+}
+
+
 
 .pagination-container {
     display: flex;
@@ -347,7 +369,11 @@ table.user-table td.table-name {
     .product-form,
     .user-form {
         width: 350px;
+        height: 600px;
         margin-inline: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
 
@@ -378,11 +404,13 @@ table.user-table td.table-name {
 
     .product-table :is(th, td) {
         padding: 5px 10px;
+        width: 100px;
     }
 
     .user-table :is(th, td) {
         padding: 5px 10px;
         border: 1px solid grey;
+        width: 100px;
     }
 
     .action-btn {
@@ -392,6 +420,7 @@ table.user-table td.table-name {
     .input-search {
         margin-left: 1.5rem;
     }
+
 
 
 }

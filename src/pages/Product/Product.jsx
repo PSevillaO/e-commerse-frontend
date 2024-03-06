@@ -268,15 +268,13 @@ export default function Product() {
 							/>
 							<label className="lbl" htmlFor="image">Imagen</label>
 							<input id="image" type="file" accept="image/*" className="admin-input" {...register("image")} />
-
-							<div className="btn-container">
-								<button type="submit" className={productId ? "btn-form btn-Edit" : "btn-form btn-create"}>
-									{
-										productId ? "Editar Producto" : "Añadir Producto"
-									}
-								</button>
-							</div>
-
+						</div>
+						<div className="btn-container">
+							<button type="submit" className={productId ? "btn-form btn-Edit" : "btn-form btn-create"}>
+								{
+									productId ? "Editar Producto" : "Añadir Producto"
+								}
+							</button>
 						</div>
 					</form>
 				</div>

@@ -4,35 +4,27 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext"
 
-
 const URL = import.meta.env.VITE_SERVER_URL;
-
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     const savedUser = JSON.parse(localStorage.getItem("currentUser"));
     return savedUser || null;
   });
-
   const [admin, setAdmin] = useState(() => {
     const savedUser = JSON.parse(localStorage.getItem("currentUser"));
     return savedUser?.role === "ADMIN_ROLE"
   });
-
   const [token, setToken] = useState(() => {
     return localStorage.getItem("token") || null;
   });
 
-
   const navigate = useNavigate();
-
 
   async function login(data) {
     try {
-
       const response = await axios.post(`${URL}/login`, data)
-      const { token, user } = response.data;
-
+      const { token, user } = response.data
       localStorage.setItem("token", token)
       localStorage.setItem("currentUser", JSON.stringify(user))
 
@@ -40,7 +32,6 @@ export const UserProvider = ({ children }) => {
       setAdmin(isAdmin)
       setUser(user);
       setToken(token);
-
 
       Swal.fire({
         title: 'Login Correcto',
@@ -50,7 +41,6 @@ export const UserProvider = ({ children }) => {
       }).then(() => {
         navigate("/")
       })
-
 
     } catch (error) {
       console.log(error)

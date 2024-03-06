@@ -18,6 +18,7 @@ export const ProductDetail = () => {
         try {
             const response = await axios.get(`${URL}/products/${id}`)
             const prod = response.data.product
+            console.log(prod)
             setproduct(prod)
 
         } catch (error) {
@@ -35,11 +36,20 @@ export const ProductDetail = () => {
                                 <img className="img" src={product.image ? URLimg + product.image : defaulPicture} alt={product.name} />
                             </div>
                             <div className="div-info">
-                                <div>
-                                    <h5 className="info-category">{product.category ? product.category.name : 'No category'}</h5>
-                                    <h2 className="info-title">${product.title}</h2>
-                                    <h3 className="info-price">$ ${product.price}</h3>
-                                    <p className="info-description">${product.info} </p>
+                                <div className="detail-descrption">
+                                    <div className="datail-category" >
+                                        <h3 className="info-category">Categoria : {product.category ? product.category.name : 'No category'}</h3>
+                                    </div>
+                                    <div className="detail-title">
+                                        <h1 className="info-title">{product.title}</h1>
+                                    </div>
+                                    <div className="detail-info">
+                                        <h3 className="info-info">{product.info} </h3>
+                                    </div>
+                                    <div className="detail-price">
+                                        <h3 className="info-price">Precio $ {product.price}</h3>
+                                    </div>
+
                                 </div>
                                 <div className="info-cant">
                                     <div className="count-detail">
@@ -60,8 +70,8 @@ export const ProductDetail = () => {
                     </section>
                     <section className="main-description">
                         <div className="div-description">
-                            <h2>Descripcion</h2>
-                            <p> ${product.description}</p>
+                            <h2>Descripcion:</h2>
+                            <p>{product.descripcion}</p>
                         </div>
                     </section>
                 </div>

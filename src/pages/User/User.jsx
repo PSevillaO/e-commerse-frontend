@@ -236,14 +236,15 @@ export default function User() {
 									{...register("active")}
 								/>
 							</div>
-							<div className="btn-container">
-								<button type="submit" className={userId ? "btn-form btn-Edit" : "btn-form btn-create"}>
-									{
-										userId ? "Editar Usuario" : "Añadir Usuario"
-									}
-								</button>
-							</div>
 						</div>
+						<div className="btn-container">
+							<button type="submit" className={userId ? "btn-form btn-Edit" : "btn-form btn-create"}>
+								{
+									userId ? "Editar Usuario" : "Añadir Usuario"
+								}
+							</button>
+						</div>
+
 					</form>
 				</div>
 				<div className="table-container">

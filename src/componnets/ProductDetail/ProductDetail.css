@@ -37,7 +37,7 @@
 
 .div-info {
     height: 370px;
-    color: white;
+    color: black;
     margin: 1rem;
     padding: 1rem;
     border: 1px solid black;
@@ -46,12 +46,19 @@
 }
 
 .div-description {
-    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: black;
     margin: 1rem;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+    h2 {
+        padding-inline: .5rem;
+    }
 }
 
 .img {
@@ -67,14 +74,20 @@
 .info-title {
     font-size: x-large;
     padding: .5rem 0 1rem 0;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(52, 51, 51);
+}
+
+.info-info {
+    padding: 1rem 0 1rem 0;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(52, 51, 51);
 }
 
 .info-price {
     font-size: larger;
-}
-
-.info-description {
-    padding: 1rem 0 1rem 0;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(52, 51, 51);
 }
 
 .info-selector {

@@ -1,4 +1,4 @@
-.main-login{
+.main-login {
     height: 100vh;
     display: flex;
 }
@@ -11,16 +11,18 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    background-color: dodgerblue;
+    background-color: #eee5e5;
 }
 
 .login-form {
     padding: 1rem;
-    background-color: rgb(23, 23, 23);
+    background-color: rgb(57, 57, 57);
     color: white;
     border-radius: 0.5rem;
-    border: 1px solid #333;
+    border: 1px solid #1d1d1d;
     max-width: 400px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+
     h1 {
         text-align: center;
         margin-bottom: 1rem;

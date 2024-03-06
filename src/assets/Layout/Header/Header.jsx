@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 import "./Header.css";
-import logo from '../../../assets/image/Logo/logo.png'
+// import logo from '../../../assets/image/Logo/logo.png'
 
 import { useUser } from "../../../context/UserContext";
 import { useOrder } from "../../../context/OrderContext";
@@ -30,7 +30,7 @@ export default function Header() {
             </label>
 
             <a className="logo-link" >
-                <img className="nav-logo" src={logo} alt="logo-img" />
+                {/* <img className="nav-logo" src={logo} alt="logo-img" /> */}
             </a>
             <nav className="main-nav">
                 <ul className="nav-list">

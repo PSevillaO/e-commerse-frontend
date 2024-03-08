@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import "../../table.css"
 import { ProductTable } from '../../componnets/ProductTable/ProductTable';
 import { useUser } from "../../context/UserContext";
+import Loading from '../../componnets/Loading/Loading'
 
 const URL = import.meta.env.VITE_SERVER_URL;
 // const TOKEN = localStorage.getItem('token')
@@ -16,7 +17,8 @@ export default function Product() {
 	const [total, setTotal] = useState(0);
 	const [limit, setLimit] = useState(10)
 	const [categories, setcategories] = useState([]);
-	const { logout, token } = useUser()
+	const { logout, token } = useUser();
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		getProducts();
@@ -26,6 +28,7 @@ export default function Product() {
 
 	async function getProducts(page = 0) {
 		try {
+			setLoading(true)
 			const response = await axios.get(`${URL}/products?page=${page}&limit=${limit}`)
 
 			const products = response.data.products;
@@ -40,6 +43,8 @@ export default function Product() {
 				title: "No se pudo obtener los productos",
 				icon: "error",
 			});
+		} finally {
+			setLoading(false)
 		}
 	}
 
@@ -283,6 +288,9 @@ export default function Product() {
 						<h2>Tabla de Productos</h2>
 						<div className="input-group input-search">
 							<input type="text" onKeyUp={handleSearch} />
+						</div>
+						<div className="loading">
+							{loading && <Loading />}
 						</div>
 					</div>
 					{/* <div className="product-table"> */}

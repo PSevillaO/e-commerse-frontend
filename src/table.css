@@ -294,6 +294,10 @@ table.user-table td.table-name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    h2 {
+        width: 430px;
+    }
 }
 
 .input-search {

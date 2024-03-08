@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import "../../table.css";
 // import { useNavgate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
+import Loading from '../../componnets/Loading/Loading'
 
 
 
@@ -18,7 +19,8 @@ export default function User() {
 	const [total, setTotal] = useState(0);
 	const [limit, setLimit] = useState(10)
 	const { register, handleSubmit, setValue } = useForm();
-	const { logout, token } = useUser()
+	const { logout, token } = useUser();
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		getUsers();
@@ -27,6 +29,7 @@ export default function User() {
 
 	async function getUsers(page = 0) {
 		try {
+			setLoading(true)
 			const response = await axios.get(`${URL}/users?page=${page}&limit=${limit}`);
 			const users = response.data.users;
 			const total = response.data.total
@@ -40,6 +43,8 @@ export default function User() {
 				title: "No se pudieron obtener los Usuarios",
 				icon: 'error'
 			})
+		} finally {
+			setLoading(false)
 		}
 	}
 
@@ -252,6 +257,9 @@ export default function User() {
 						<h2>Tabla de usuario</h2>
 						<div className="input-group input-search">
 							<input type="text" onKeyUp={handleSearch} />
+						</div>
+						<div className="loading">
+							{loading && <Loading />}
 						</div>
 					</div>
 					<UserTable users={dbUsers} deleteUser={deleteUser} setFormValue={setFormValue} />

@@ -99,6 +99,10 @@ export default function Header() {
                                     <i className="fa-solid fa-dolly"></i>
                                     Ordenes
                                 </NavLink>
+                                <NavLink to="/pass" className="nav-orders">
+                                    <i className="fa-solid fa-key"></i>
+                                    Cambiar clave
+                                </NavLink>
                                 <a className="nav-logout" onClick={() => logout()}>
                                     <i className="fa-solid fa-arrow-right-from-bracket"></i>{" "}
                                     Logout

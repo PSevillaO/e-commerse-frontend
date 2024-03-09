@@ -213,13 +213,13 @@ export default function User() {
 
 						<div className="input-group">
 							<label className="lbl" htmlFor="name">Nombre</label>
-							<input id="name" type="text" className="admin-input" {...register("name")} />
+							<input id="name" type="text" className="admin-input" required minLength={4} maxLength={60} {...register("name")} />
 
 							<label className="lbl" htmlFor="email">e-mail</label>
-							<input id="email" type="email" className="admin-input" {...register("email")} />
+							<input id="email" type="email" className="admin-input" required minLength={6} maxLength={80} {...register("email")} />
 
 							<label className="lbl" htmlFor="password">Password</label>
-							<input id="password" type="password" className="admin-input" disabled={userId} {...register("password")} />
+							<input id="password" type="password" className="admin-input" disabled={userId} required minLength={4} maxLength={70} {...register("password")} />
 
 							<label className="lbl" htmlFor="image">Imagen</label>
 							<input id="image" type="file" accept="image/*" className="admin-input" {...register("image")} />
@@ -255,7 +255,9 @@ export default function User() {
 				<div className="table-container">
 					<div className="flex-between">
 						<h2>Tabla de usuario</h2>
+						<i className="fa-solid fa-magnifying-glass"></i>
 						<div className="input-group input-search">
+
 							<input type="text" onKeyUp={handleSearch} />
 						</div>
 						<div className="loading">

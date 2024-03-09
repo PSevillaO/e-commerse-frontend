@@ -47,9 +47,7 @@ export const Cart = () => {
                     <button className='btn-comprar' onClick={() => finishOrder()}>
                         Comprar
                     </button>
-
                 </div>
-
             </div>
         </div>
     )

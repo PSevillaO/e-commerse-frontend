@@ -13,6 +13,7 @@ import AdminRoutes from "./AdminRoutes/AdminRoutes";
 import { Cart } from "./assets/Layout/Cart/Cart";
 import { ProductDetail } from "./componnets/ProductDetail/ProductDetail";
 import Orders from "./pages/Orders/Orders";
+import Pass from "./pages/Pass/Pass"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/pass" element={<Pass />} />
           <Route
             path="/admin-user"
             element={

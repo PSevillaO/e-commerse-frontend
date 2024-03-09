@@ -232,12 +232,14 @@ export default function Product() {
 							<input type="text"
 								className="admin-input"
 								id="title"
+								required minLength={4} maxLength={60}
 								{...register("title")}
 							/>
 							<label className="lbl" htmlFor="info">Informacion</label>
 							<input type="text"
 								className="admin-input"
 								id="info"
+								minLength={4} maxLength={60}
 								{...register("info")}
 							/>
 							<label className="lbl" htmlFor="descripcion">Descripcion</label>
@@ -245,6 +247,7 @@ export default function Product() {
 								rows={6}
 								className="admin-input"
 								id="descripcion"
+								minLength={4} maxLength={60}
 								{...register("descripcion")}
 							></textarea>
 							<label className="lbl" htmlFor="category">Categoria</label>
@@ -262,6 +265,7 @@ export default function Product() {
 								type="number"
 								className="admin-input"
 								id="price"
+								min={1} max={10000000}
 								{...register("price")}
 							/>
 							<label className="lbl" htmlFor="dateCard">Fecha</label>
@@ -286,6 +290,7 @@ export default function Product() {
 				<div className="table-container">
 					<div className="flex-between">
 						<h2>Tabla de Productos</h2>
+						<i className="fa-solid fa-magnifying-glass"></i>
 						<div className="input-group input-search">
 							<input type="text" onKeyUp={handleSearch} />
 						</div>

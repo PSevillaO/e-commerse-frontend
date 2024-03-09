@@ -296,6 +296,8 @@ para formar la cruz */
   right: 10px;
   background-color: white;
   max-height: 0;
+  font-size: small;
+  align-items: flex-start;
 }
 
 .dropdown-menu:hover .dropdown-links {
@@ -315,6 +317,11 @@ para formar la cruz */
   color: black;
   text-decoration: none;
   transition: color .25s ease-in-out;
+  gap: 1rem;
+
+  i {
+    padding-left: 1rem;
+  }
 
   &:hover {
     background-color: #333;
@@ -332,6 +339,11 @@ para formar la cruz */
   color: black;
   cursor: pointer;
   transition: color .25s ease-in-out;
+  gap: 1rem;
+
+  i {
+    padding-left: 1rem;
+  }
 
   &:hover {
     background-color: #333;

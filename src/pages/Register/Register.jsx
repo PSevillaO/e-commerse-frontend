@@ -54,13 +54,13 @@ export default function Register() {
 
           <div className="input-group">
             <label className="lbl" htmlFor="name">Nombre</label>
-            <input id="name" type="text" className="admin-input" {...register("name")} />
+            <input id="name" type="text" className="admin-input" required minLength={4} maxLength={60} {...register("name")} />
 
             <label className="lbl" htmlFor="email">e-mail</label>
-            <input id="email" type="email" className="admin-input" {...register("email")} />
+            <input id="email" type="email" className="admin-input" required minLength={6} maxLength={80} {...register("email")} />
 
             <label className="lbl" htmlFor="password">Password</label>
-            <input id="password" type="password" className="admin-input" {...register("password")} />
+            <input id="password" type="password" className="admin-input" required minLength={4} maxLength={70} {...register("password")} />
 
             <label className="lbl" htmlFor="image">Imagen</label>
             <input id="image" type="file" accept="image/*" className="admin-input" {...register("image")} />

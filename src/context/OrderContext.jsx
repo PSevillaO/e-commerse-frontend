@@ -93,12 +93,12 @@ export const OrderProvider = ({ children }) => {
                 })
             }
             const newOrder = {
-                userId: user._id,
+                user: user._id,
                 total,
                 products: order
             }
-
-            const response = await axios.post(`${URL}/ords`, newOrder)
+            console.log("NEW", newOrder)
+            const response = await axios.post(`${URL}/orders`, newOrder)
             console.log(response)
             Swal.fire({
                 icon: "success",

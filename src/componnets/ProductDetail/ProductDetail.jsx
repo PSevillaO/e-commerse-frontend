@@ -23,7 +23,7 @@ export const ProductDetail = () => {
         try {
             const response = await axios.get(`${URL}/products/${id}`)
             const prod = response.data.product
-            console.log(prod)
+
             setproduct(prod)
 
         } catch (error) {
